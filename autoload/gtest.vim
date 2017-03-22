@@ -162,7 +162,7 @@ fu! s:RunWithMake(wrapper, cmd, highlight_errors)
 
   " this is how gtest outputs errors
   if (a:highlight_errors)
-    set errorformat=%f:%l:\ %m
+    set errorformat="%D%*\a[%*\d]: Entering directory %*[`']%f',%X%*\a[%*\d]: Leaving directory %*[`']%f',%D%*\a: Entering directory %*[`']%f',%X%*\a: Leaving directory %*[`']%f',%DMaking %*\a in %f,%f|%l| %m,%f:%l:\ %m"
   else
     set errorformat=pleasedonotmatchanything " hacky, but working
   endif
